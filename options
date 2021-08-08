@@ -1,0 +1,17 @@
+#!/bin/bash
+
+while getopts :u:p:ab option;
+do
+    case $option in
+        u) username=$OPTARG;;
+        p) password=$OPTARG;;
+        a) echo "Got A flag";;
+        b) echo "Got B flag";;
+        ?) echo -e "\033[31mI don't know what $OPTARG is!\033[0m ❌";;
+    esac
+done
+
+echo -e "Username: $username ✅ \nPassword: $password ✅"
+
+#Sample user input 
+    # ./options -u scott -p yegon -ab

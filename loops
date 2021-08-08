@@ -1,0 +1,43 @@
+#!/bin/bash
+
+echo "While loop"
+
+declare -i n=0;
+
+while ((n < 10))
+do
+    echo "n: $n"
+    ((n++))
+done
+
+echo;
+echo "Until loop"
+
+declare -i m=0;
+
+until ((m==10))
+do
+    echo "m: $m"
+    ((m++))
+    #sleep 1
+done
+
+echo;
+echo "For loop"
+for i in {1..10};
+do
+    echo $i
+done
+
+for ((i=1; i<=100; i++))
+do
+    echo $i
+done
+
+echo;
+
+declare -a fruits=("Apple" "Banana" "Cherry")
+for fruit in ${fruits[@]}
+do
+    echo "Today's fruit is: $fruit"
+done

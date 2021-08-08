@@ -1,0 +1,17 @@
+#!/bin/bash
+
+declare -a snacks=("apple", "banana", "orange")
+
+echo ${snacks[2]} #Get the item at the 2nd index
+
+echo ${snacks[@]}
+
+# for loop
+for i in {0..6}; do echo "$i: ${snacks[$i]}"; done
+
+# Assossiative array
+declare -A office
+office[city]="Nairobi"
+office["building_name"]="Tower"
+echo ${office["building_name"]} is in ${office["city"]}
+for i in $office; do echo "$i: ${office[$i]}"; done

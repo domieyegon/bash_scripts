@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "What is your name?"
+read name
+
+echo "What is your password?"
+read -s pass
+
+read -p "What is your favourite animal: " animal
+
+read -ep "Favourite color?" -i "Blue" favcolor
+
+
+echo "Which phone type do you like?"
+select phone in "Techno" "Samsung" "Oppo" "Infinix" "Iphone"
+do
+    echo "You selected $phone"
+    break;
+done
+printf "Name:\t%s\n" $name
+printf "Password:\t%s\n" $pass
+printf "Animal:\t%s\n" $animal
+printf "Color:\t%s\n" $favcolor
+

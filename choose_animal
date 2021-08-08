@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Which Animal"
+select animal in "cat" "dog" "quit"
+do
+    case $animal in 
+        cat) echo "Cats likes to sleep.";;
+        dog) echo "Dogs like to play catch.";;
+        quit) break;;
+        *) echo -e "\033[31mInvalid choice. Try again!\033[0m";;
+    esac
+done

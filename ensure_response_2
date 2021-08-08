@@ -1,0 +1,17 @@
+#!/bin/bash
+
+read -p "Favorite animal? (cat) " fav
+while [[ -z $fav ]] #-z is used to check if $fav is not empty
+do
+    fav="cat"
+done
+
+read -p "What year? (nnnn)" year
+until [[ $year =~ [0-9]{4} ]];
+do
+    read -p "A year, Please ! [nnnn] " year
+done
+
+echo "$fav was selected."
+echo "$year was selected."
+    

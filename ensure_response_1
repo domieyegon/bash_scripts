@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if (($#<3)); then
+    echo -e "\033[31mPlease input \033[1mUsername\033[0m\033[31m, \033[1muserid\033[0m \033[31mand  \033[1mfavourite number\033[0m"
+else
+    # Logic done here
+    echo "Username: $1"
+    echo "userid: $2"
+    echo "Favorite number: $3"
+fi
+    

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+myvar="Hello!"
+
+echo "The value of myvar is $myvar"
+
+#Make variable to be read only. They cant be changed after diclaration
+declare -r myname="Dominic"
+
+echo "My name is $myname"
+
+myname="Michael"
+
+echo "Check if name was changed $myname"
+
+#Transform to lowercase
+declare -l strtolower="This is some TEXT to Lower case"
+echo "Lowercase Result: $strtolower"
+
+#Transform to Uppercase
+declare -u strtoupper="This is some TEXT to e Transformed to upper case"
+echo "Uppercase Result: $strtoupper"
+
+
+#This is a comment
+
+echo "There"
+

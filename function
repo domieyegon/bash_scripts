@@ -1,0 +1,35 @@
+#!/bin/bash
+
+greet() {
+    echo "Hi there!, My name is $1" #$1 is the first argument used, $@ rep all the arguments given to a function
+}
+
+echo "And now I greet you..."
+#greet #Call the function
+
+greet Dominic #pass an arg
+
+numberthing() {
+    declare -i i=1
+    for f in $@; do
+        echo "$i: $f"
+        ((i +=1))
+    done
+}
+
+echo; echo -e "\033[1m\033[32mLessons Learn\033[0m"
+numberthing $(ls .)
+echo;
+numberthing pine birch maple spruce
+
+# Local variables
+var1="I am a variable 1"
+myFunction() {
+   var2="I am a variable 2"
+   local var3="I am a variable 3"
+}
+myFunction
+echo $var1
+echo $var2
+echo $var3
+
